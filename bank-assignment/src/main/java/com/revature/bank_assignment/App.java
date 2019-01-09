@@ -4,11 +4,12 @@ import java.util.Scanner;
 
 public class App {
 
-	private static void main(String args[]) {
+	public static void main(String args[]) {
 		String temp = "";
 		String userin_ID = "";
 		String userin_pass = "";
 		Boolean user_verified = false;
+		Boolean user_superuser = false;
 
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Hello, Welcome to the Banking Application.");
@@ -19,6 +20,10 @@ public class App {
 		} else if (temp.compareToIgnoreCase("no") == 0) {
 			System.out.println("Would you like to create an ID? (Yes | No | Quit): ");
 			if (temp.compareToIgnoreCase("yes") == 0) {
+				System.out.println("Please input User ID:");
+				userin_ID = scan.nextLine();
+				System.out.println("Please input User Password:");
+				userin_pass = scan.nextLine();
 
 			} else {
 				System.out.println("OK, have a good day.");
