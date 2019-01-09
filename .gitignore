@@ -31,10 +31,3 @@
 #Mac
 .DS_Store
 /.recommenders/
-
-#Connection properties file
-#/bank-assignment/src/main/resources/connection.properties
-
-#SQL Database setup/teardown files
-#./setup.sql
-#./teardown.sql
