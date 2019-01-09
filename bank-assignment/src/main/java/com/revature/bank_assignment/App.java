@@ -1,9 +1,5 @@
 package com.revature.bank_assignment;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
