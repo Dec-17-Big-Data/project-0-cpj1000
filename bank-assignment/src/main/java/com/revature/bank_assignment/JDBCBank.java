@@ -5,8 +5,10 @@ import java.util.Scanner;
 
 import com.revature.bank_assignment.models.Account;
 import com.revature.bank_assignment.models.Login;
+import com.revature.bank_assignment.models.Transaction;
 import com.revature.bank_assignment.services.AccountService;
 import com.revature.bank_assignment.services.LoginService;
+import com.revature.bank_assignment.services.TransactionService;
 
 public class JDBCBank {
 
@@ -15,10 +17,12 @@ public class JDBCBank {
 		Scanner scan = new Scanner(System.in);
 		LoginService loginService = LoginService.getService();
 		AccountService accountService = AccountService.getService();
+		TransactionService transactionService = TransactionService.getService();
 		String menuChoice = "";
 		String accountMenuChoice = "";
 		String manageMenuChoice = "";
 		String accountSelection = "";
+		String selectionLast = "";
 		boolean superuser = false;
 		boolean authorized = false;
 		String moneyAmount = "";
@@ -72,10 +76,8 @@ public class JDBCBank {
 						System.out.println("3. Exit.");
 						System.out.println("-----------------------------------------");
 						if (superuser) {
-							// implement these options for superuser
 							System.out.println("----------Superuser Account Options----------");
 							System.out.println("4. Get list of all users.");
-							System.out.println("5. Create new user.");
 						}
 
 						manageExit = false;
@@ -156,7 +158,27 @@ public class JDBCBank {
 											}
 										}
 									} else if (manageMenuChoice.equals("3")) {
-										// TODO write transaction code
+										System.out.println("Enter account number to check transaction history.");
+										accountSelection = scan.nextLine();
+										authorized = false;
+										if (superuser == false) {
+											for (Account temp : accountList) {
+												if (Integer.toString(temp.getAccountID()).equals(accountSelection)) {
+													authorized = true;
+												}
+											}
+										} else {
+											authorized = true;
+										}
+										if (!authorized) {
+											System.out.println("You do not have access to this account.");
+										} else {
+											List<Transaction> transactionList = transactionService
+													.getTransactionList(Integer.parseInt(accountSelection));
+											for (Transaction temp : transactionList) {
+												System.out.println(temp);
+											}
+										}
 
 									} else if (manageMenuChoice.equals("4")) {
 										System.out.println("Enter account number to delete.");
@@ -185,8 +207,6 @@ public class JDBCBank {
 										manageExit = true;
 									}
 
-									// Code for deleting/withdrawal/deposit/seeing old transactions here
-
 								} else {
 									System.out.println("No accounts found under user account.");
 									manageExit = true;
@@ -204,22 +224,46 @@ public class JDBCBank {
 
 							accountExit = true;
 						} else if (accountMenuChoice.equals("4") && superuser) {
-							List<Login> loginList = loginService.getAllLogins();
-							if (loginList != null) {
-								System.out.println();
-								System.out.println("List of All Users in the Bank Database:: ");
-								for (Login temp : loginList) {
-									System.out.println(temp);
+							manageExit = false;
+							while (!manageExit) {
+								List<Login> loginList = loginService.getAllLogins();
+								if (loginList != null) {
+									System.out.println();
+									System.out.println("List of All Users in the Bank Database:: ");
+									for (Login temp : loginList) {
+										System.out.println(temp);
+									}
+									System.out.println();
+									System.out.println("----------Superuser Account Management----------");
+									System.out.println("What would you like to do?:");
+									System.out.println("1. Delete a user and all records associated.");
+									System.out.println("2. Change user's password.");
+									System.out.println("3. Exit.");
+									System.out.println();
+									manageMenuChoice = scan.nextLine();
+
+									if (manageMenuChoice.equals("1")) {
+										System.out.println(
+												"Enter user number to purge(Warning: This purges every info associated with the user.)");
+										accountSelection = scan.nextLine();
+										loginService.deleteUser(Integer.parseInt(accountSelection));
+
+									} else if (manageMenuChoice.equals("2")) {
+										System.out.println("Enter user number of user to change password for: ");
+										accountSelection = scan.nextLine();
+										System.out.println("Enter new password for user: ");
+										selectionLast = scan.nextLine();
+										loginService.updatePassword(Integer.parseInt(accountSelection), selectionLast);
+									} else if (manageMenuChoice.equals("3")) {
+										System.out.println("Back to Account menu.");
+										manageExit = true;
+									} else {
+										System.out.println("Invalid Menu Selection. Please try again.");
+									}
+
 								}
-								// Put code to change user password/delete logins here
 							}
-
-						} else if (accountMenuChoice.equals("5") && superuser) {
-
-						} else {
-							System.out.println("Invalid Menu Selection. Please try again.");
 						}
-
 					}
 				} else {
 					System.out.println("Invalid Username/Password. Login Failed.");
