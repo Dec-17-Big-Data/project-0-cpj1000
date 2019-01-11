@@ -31,3 +31,6 @@
 #Mac
 .DS_Store
 /.recommenders/
+
+#connection properties
+./bank-assignment/src/main/resources/connection.properties

@@ -1,0 +1,48 @@
+[TRACE] 2019-01-11 02:30:23.827 [main] LoginOracle - Enter getLogin: LoginID = hello
+[TRACE] 2019-01-11 02:30:24.329 [main] LoginOracle - Exit with(Optional.empty)
+[TRACE] 2019-01-11 02:31:01.297 [main] LoginOracle - Enter getLogin: LoginID = hello
+[TRACE] 2019-01-11 02:31:01.453 [main] LoginOracle - Exit with(Optional.empty)
+[TRACE] 2019-01-11 02:32:09.820 [main] LoginOracle - Enter getLogin: LoginID = hello
+[TRACE] 2019-01-11 02:32:09.958 [main] LoginOracle - Exit with(Optional.empty)
+[TRACE] 2019-01-11 02:47:24.274 [main] LoginOracle - Enter getLogin: LoginID = banks_superuser
+[TRACE] 2019-01-11 02:47:24.440 [main] LoginOracle - Exit with(Optional.empty)
+[TRACE] 2019-01-11 02:50:45.519 [main] LoginOracle - Enter getLogin: LoginID = banks_superuser
+[TRACE] 2019-01-11 02:50:45.669 [main] LoginOracle - Exit with(Optional.empty)
+[TRACE] 2019-01-11 02:53:15.885 [main] LoginOracle - Enter getLogin: LoginID = banks_superuser
+[TRACE] 2019-01-11 02:53:16.045 [main] LoginOracle - Exit with(Optional.empty)
+[TRACE] 2019-01-11 02:55:00.512 [main] LoginOracle - Enter getLogin: LoginID = banks_superuser
+[TRACE] 2019-01-11 02:55:00.636 [main] LoginOracle - Exit with(Optional.empty)
+[TRACE] 2019-01-11 03:02:28.024 [main] LoginOracle - Enter getLogin: LoginID = bank_superuser
+[TRACE] 2019-01-11 03:02:28.150 [main] LoginOracle - Exit with(Optional.empty)
+[TRACE] 2019-01-11 03:04:18.254 [main] LoginOracle - Enter getLogin: LoginID = bank_superuser
+[TRACE] 2019-01-11 03:04:18.395 [main] LoginOracle - Exit with(Optional.empty)
+[TRACE] 2019-01-11 03:04:37.290 [main] LoginOracle - Enter getLogin: LoginID = bank_superuser
+[TRACE] 2019-01-11 03:04:37.433 [main] LoginOracle - Exit with(Optional.empty)
+[TRACE] 2019-01-11 03:07:54.609 [main] LoginOracle - Enter getLogin: LoginID = bank_superuser
+[TRACE] 2019-01-11 03:08:02.281 [main] LoginOracle - Exit with(Optional.empty)
+[TRACE] 2019-01-11 03:11:34.437 [main] LoginOracle - Enter getLogin: LoginID = bank_superuser
+[TRACE] 2019-01-11 03:11:35.589 [main] LoginOracle - Exit with(Optional.empty)
+[TRACE] 2019-01-11 03:14:54.664 [main] LoginOracle - Enter getLogin: LoginID = bank_superuser
+[TRACE] 2019-01-11 03:14:55.718 [main] LoginOracle - Exit with(Optional.empty)
+[TRACE] 2019-01-11 03:36:52.553 [main] LoginOracle - Enter getLogin: LoginID = bank_superuser
+[TRACE] 2019-01-11 03:36:54.067 [main] LoginOracle - Exit with(Optional.empty)
+[TRACE] 2019-01-11 03:37:35.223 [main] LoginOracle - Enter getLogin: LoginID = banks_superuser
+[TRACE] 2019-01-11 03:37:36.195 [main] LoginOracle - Exit with(Optional[Login [userNumber=1, loginID=banks_superuser, loginPassword=a1s2d3f4]])
+[TRACE] 2019-01-11 03:37:36.195 [main] LoginOracle - Enter getLogin: LoginID = banks_superuser
+[TRACE] 2019-01-11 03:37:36.454 [main] LoginOracle - Exit with(Optional[Login [userNumber=1, loginID=banks_superuser, loginPassword=a1s2d3f4]])
+[TRACE] 2019-01-11 03:39:42.486 [main] LoginOracle - Enter getLogin: LoginID = banks_superuser
+[TRACE] 2019-01-11 03:39:43.461 [main] LoginOracle - Exit with(Optional[Login [userNumber=1, loginID=banks_superuser, loginPassword=a1s2d3f4]])
+[TRACE] 2019-01-11 03:39:43.461 [main] LoginOracle - Enter getLogin: LoginID = banks_superuser
+[TRACE] 2019-01-11 03:39:43.685 [main] LoginOracle - Exit with(Optional[Login [userNumber=1, loginID=banks_superuser, loginPassword=a1s2d3f4]])
+[TRACE] 2019-01-11 03:41:33.282 [main] LoginOracle - Enter getLogin: LoginID = banks_superuser
+[TRACE] 2019-01-11 03:41:34.227 [main] LoginOracle - Exit with(Optional[Login [userNumber=1, loginID=banks_superuser, loginPassword=a1s2d3f4]])
+[TRACE] 2019-01-11 03:41:34.227 [main] LoginOracle - Enter getLogin: LoginID = banks_superuser
+[TRACE] 2019-01-11 03:41:34.458 [main] LoginOracle - Exit with(Optional[Login [userNumber=1, loginID=banks_superuser, loginPassword=a1s2d3f4]])
+[TRACE] 2019-01-11 03:49:04.324 [main] LoginOracle - Enter getLogin: LoginID = banks_superuser
+[TRACE] 2019-01-11 03:49:05.285 [main] LoginOracle - Exit with(Optional[Login [userNumber=1, loginID=banks_superuser, loginPassword=a1s2d3f4]])
+[TRACE] 2019-01-11 03:49:05.286 [main] LoginOracle - Enter getLogin: LoginID = banks_superuser
+[TRACE] 2019-01-11 03:49:05.512 [main] LoginOracle - Exit with(Optional[Login [userNumber=1, loginID=banks_superuser, loginPassword=a1s2d3f4]])
+[TRACE] 2019-01-11 03:52:11.861 [main] LoginOracle - Enter getLogin: LoginID = banks_superuser
+[TRACE] 2019-01-11 03:52:13.041 [main] LoginOracle - Exit with(Optional[Login [userNumber=1, loginID=banks_superuser, loginPassword=a1s2d3f4]])
+[TRACE] 2019-01-11 03:52:13.042 [main] LoginOracle - Enter getLogin: LoginID = banks_superuser
+[TRACE] 2019-01-11 03:52:13.265 [main] LoginOracle - Exit with(Optional[Login [userNumber=1, loginID=banks_superuser, loginPassword=a1s2d3f4]])
