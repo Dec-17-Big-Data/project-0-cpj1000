@@ -1,0 +1,14 @@
+drop table transactions;
+drop table Bank_Account;
+drop table Login;
+drop sequence bank_account_id_seq;
+drop sequence user_number_seq;
+drop sequence trans_id_seq;
+drop procedure add_account;
+drop procedure add_login;
+drop procedure delete_account;
+drop procedure delete_login;
+drop procedure Deposit;
+drop procedure Withdraw;
+commit;
+exit;
